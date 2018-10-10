@@ -41,6 +41,16 @@ class ViewController: UIViewController {
         
         child?.updatePosition(for: verticies)
     }
+    
+    @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
+        
+        let location = sender.location(in: sceneView)
+        let results = sceneView.hitTest(location, options: nil)
+        if let result = results.first,
+            let node = result.node as? EmojiNode {
+            node.next()
+        }
+    }
 }
 
 extension ViewController: ARSCNViewDelegate {
