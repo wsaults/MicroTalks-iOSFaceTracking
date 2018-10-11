@@ -16,8 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ARSCNView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="805-O0-a3e">
+                                <rect key="frame" x="16" y="620" width="343" height="29"/>
+                                <segments>
+                                    <segment title="None"/>
+                                    <segment title="Mesh"/>
+                                    <segment title="Nose"/>
+                                    <segment title="Face"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeFeature:" destination="BYZ-38-t0r" eventType="valueChanged" id="348-SU-gIC"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="805-O0-a3e" secondAttribute="bottom" constant="19" id="GBE-o9-lWV"/>
+                            <constraint firstItem="805-O0-a3e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nbk-zC-exo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="805-O0-a3e" secondAttribute="trailing" constant="16" id="srI-1s-Ohi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="nBu-Qp-SRK" appends="YES" id="8x4-yI-6WP"/>
@@ -34,7 +53,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="110" y="134"/>
+            <point key="canvasLocation" x="109.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
